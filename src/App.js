@@ -1,24 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { Grid, useMediaQuery } from "@material-ui/core";
+import React from "react";
+import AddSong from "./components/AddSong";
+import Header from "./components/Header";
+import SongList from "./components/SongList";
+import SongPlayer from "./components/SongPlayer";
 
 function App() {
+  const greaterThanMd = useMediaQuery((theme) => theme.breakpoints.up("md"));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <Header />
+      <Grid container spacing={3}>
+        <Grid
+          style={{
+            paddingTop: "80px",
+          }}
+          item
+          xs={12}
+          md={7}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <AddSong />
+          <SongList />
+        </Grid>
+        <Grid
+          style={
+            greaterThanMd
+              ? {
+                  position: "fixed",
+                  width: "100%",
+                  right: 0,
+                  top: "70px",
+                }
+              : {
+                  position: "fixed",
+                  width: "100%",
+                  left: 0,
+                  bottom: 0,
+                }
+          }
+          item
+          xs={12}
+          md={5}
+        >
+          <SongPlayer />
+        </Grid>
+      </Grid>
+    </>
   );
 }
 
