@@ -4,12 +4,28 @@ import AddSong from "./components/AddSong";
 import Header from "./components/Header";
 import SongList from "./components/SongList";
 import SongPlayer from "./components/SongPlayer";
+import songReducer from "./reducer";
+
+export const SongContext = React.createContext({
+  song: {
+    id: "1434c455-1f8e-460e-b31a-9d7759e69212",
+    title: "Shine On",
+    artist: "Pink Floyd",
+    duration: "1322",
+    thumbnail:
+      "https://i.ytimg.com/vi/cWGE9Gi0bB0/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrrXOrpAUt5wbhlkgrhGTvuKSwdQ",
+    url: "https://www.youtube.com/watch?v=cWGE9Gi0bB0",
+  },
+  isPlaying: false,
+});
 
 function App() {
+  const initialSongState = React.useContext(SongContext);
+  const [state, dispatch] = React.useReducer(songReducer, initialSongState);
   const greaterThanMd = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
   return (
-    <>
+    <SongContext.Provider value={{ state, dispatch }}>
       <Header />
       <Grid container spacing={3}>
         <Grid
@@ -46,7 +62,7 @@ function App() {
           <SongPlayer />
         </Grid>
       </Grid>
-    </>
+    </SongContext.Provider>
   );
 }
 
