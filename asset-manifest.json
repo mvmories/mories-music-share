@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/mories-music-share/static/js/main.fe2c0533.chunk.js",
+    "main.js.map": "/mories-music-share/static/js/main.fe2c0533.chunk.js.map",
+    "runtime-main.js": "/mories-music-share/static/js/runtime-main.1a9e4fc6.js",
+    "runtime-main.js.map": "/mories-music-share/static/js/runtime-main.1a9e4fc6.js.map",
+    "static/js/2.f8b551ac.chunk.js": "/mories-music-share/static/js/2.f8b551ac.chunk.js",
+    "static/js/2.f8b551ac.chunk.js.map": "/mories-music-share/static/js/2.f8b551ac.chunk.js.map",
+    "index.html": "/mories-music-share/index.html",
+    "static/js/2.f8b551ac.chunk.js.LICENSE.txt": "/mories-music-share/static/js/2.f8b551ac.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a9e4fc6.js",
+    "static/js/2.f8b551ac.chunk.js",
+    "static/js/main.fe2c0533.chunk.js"
+  ]
+}
