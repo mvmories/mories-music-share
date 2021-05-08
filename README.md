@@ -4,7 +4,7 @@ This project is essentialy a React Player with Song List and Queue, generated au
 
 ## Demo Page
 
-You can play with the mories music share in the following [github-page link](http://google.com)
+You can play with the mories music share in the following [github-page link](https://mvmories.github.io/mories-music-share)
 
 ## Tech Stack Used
 
